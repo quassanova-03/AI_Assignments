@@ -96,3 +96,96 @@ Python
 Flask (web server framework)  
 Pillow [PIL] (for CAPTCHA image generation)  
 HTML (for the user interface)
+
+
+# SEARCH ALGORITHMS (WITH MISSIONARY CANNIBAL EXAMPLE)
+
+## Overview
+This project implements the classic Missionaries and Cannibals problem using several uninformed search algorithms in Python.
+
+The objective is to safely transport three missionaries and three cannibals across a river using a boat that can carry at most two people, without ever leaving missionaries outnumbered by cannibals on either side.
+
+## Problem Description
+There are :
+- 3 Missionaries
+- 3 Cannibals
+- 1 Boat
+The boat can carry at most two people at a time and there must be at least one traveller to operate the boat.
+The goal is to enure all the missionaries and cannibals reach the other side (left to right || right to left) safely.
+At no point should the number of cannibals exceed the number of missionaries on either side of the river (unless there are no missionaries on that side).
+If the condition is violated (i.e. number of cannibals >number of missionaries) at any givent point, the missionaries would be eated and it is considered a failed attempt.
+
+## State Representation
+Each state is represented a a tuple :
+```
+(M, C, B)
+```
+where :
+- M : number of missionaries on the left bank
+- C : number of cannibals on the left bank
+- B : boat position
+   - B = 0  → boat on left bank
+   - B = 1  → boat on right bank
+
+Initial State : (3, 3, 0)  
+Goal State : (0, 0, 1)
+
+## Search Algorithms Implemented
+The following uninformed search strategies are implemented:
+
+1. Breadth-First Search (BFS) :  
+Explores states level by level using a queue.  
+Guarantees the shortest solution path.
+
+2. Depth-First Search (DFS) :  
+Explores as far as possible along a branch before backtracking using a stack.
+
+3. Iterative Deepening Depth First Search (IDDFS) :  
+Combines the advantages of DFS and BFS by performing DFS with increasing depth limits.
+
+## Project Structure
+```
+AI_Assignments/
+|
+└─ Search Algorithms/
+   │
+   └─ SearchAlgo_MissionaryCannibal.py
+```
+The file contains:
+- Problem definition
+- State validation
+- Successor generation
+- BFS implementation
+- DFS implementation
+- Depth-Limited Search (DLS)
+- Iterative Deepening DFS (IDDFS)
+
+## How the program works
+1. The problem is initialized with the starting state.
+2. A search algorithm explores possible states.
+3. Each state generates valid successor states.
+4. Invalid states (where missionaries are outnumbered) are discarded.
+5. The algorithm continues searching until the goal state is found.
+6. The sequence of states leading to the solution is returned.
+
+## How to run the program
+1. Navigate to the project directory
+   ```
+   cd Search_Algorithms
+   ```
+2. Run the python file
+   ```
+   python SearchAlgo_MissionaryCannibal.py
+   ```
+   or
+   ```
+   py SearchAlgo_MissionaryCannibal.py
+   ```
+The program will print the solution paths found using :  
+- BFS
+- DFS
+- IDDFS
+
+## Techologies Used
+- Python (to implement the problem logic and search algorithms)
+- Python Standard Library (to implement the queue structure for Breadth-First Search (BFS))
