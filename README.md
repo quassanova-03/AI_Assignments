@@ -110,9 +110,9 @@ There are :
 - 3 Missionaries
 - 3 Cannibals
 - 1 Boat
-The boat can carry at most two people at a time and there must be at least one traveller to operate the boat.
-The goal is to enure all the missionaries and cannibals reach the other side (left to right || right to left) safely.
-At no point should the number of cannibals exceed the number of missionaries on either side of the river (unless there are no missionaries on that side).
+The boat can carry at most two people at a time and there must be at least one traveller to operate the boat.  
+The goal is to enure all the missionaries and cannibals reach the other side (left to right || right to left) safely.  
+At no point should the number of cannibals exceed the number of missionaries on either side of the river (unless there are no missionaries on that side).  
 If the condition is violated (i.e. number of cannibals >number of missionaries) at any givent point, the missionaries would be eated and it is considered a failed attempt.
 
 ## State Representation
