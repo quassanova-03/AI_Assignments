@@ -92,10 +92,10 @@ This implementation includes:
 These distortions make it difficult for automated programs to reliably recognize the text.
 
 ## Technologies Used
-Python  
-Flask (web server framework)  
-Pillow [PIL] (for CAPTCHA image generation)  
-HTML (for the user interface)
+- Python  
+- Flask (web server framework)  
+- Pillow [PIL] (for CAPTCHA image generation)  
+- HTML (for the user interface)
 
 
 # SEARCH ALGORITHMS (WITH MISSIONARY CANNIBAL EXAMPLE)
